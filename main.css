@@ -1,86 +1,87 @@
-body {
+body, html {
+  font-family: sans-serif;
+  height: 100%;
   margin: 0;
 }
 
-h1 {
-  color: rgba(255,255,255,0.8);
-  font-family: sans-serif;
-  font-size: 60px;
-  line-height: 600px;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(0,0,0,0.2);
-  text-transform: uppercase;
-}
-
-h2, p {
-  font-family: sans-serif;
-  font-weight: 100;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-p {
-  line-height: 1.5em;
-  padding: 0 15px;
-}
-
-.parallax {
-  height: 600px;
+.img-1, .img-2, .img-3, .img-4 {
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
-  background-attachment: fixed;
+  opacity: 0.75;
+  position: relative;
 }
 
-.container:last-child {
-  margin-bottom: 80px;
+.img-1 {
+  background-image: url('./img/australia.png');
+  min-height: 100%;
 }
 
-.content:first-child {
-  margin-top: 100px;
+.img-2 {
+  background-image: url('./img/korea.png');
+  min-height: 100%;
+}
+
+.img-3 {
+  background-image: url('./img/taiwan.png');
+  min-height: 100%;
+}
+
+.img-4 {
+  background-image: url('./img/france.png');
+  min-height: 100%;
+}
+
+.static {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
 }
 
 .content {
-  margin: 0 auto;
-  max-width: 960px;
+  background-color: #fff;
+  color: #5a5a5c;
+  padding: 50px;
+  text-align: left;
 }
 
-.parallax-1 {
-  background-image: url('./img/australia.png')
+span {
+  background-color: #111;
+  color: #fff;
+  font-size: 80px;
+  letter-spacing: 10px;
+  padding: 20px;
+  text-transform: uppercase;
 }
 
-.parallax-2 {
-  background-image: url('./img/korea.png')
+h3 {
+  color: #111;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-.parallax-3 {
-  background-image: url('./img/taiwan.png')
-}
-
-.parallax-4 {
-  background-image: url('./img/france.png')
-}
-
-@media all and (min-width: 600px) {
-  h2 {
-    font-size: 40px;
+@media screen and (max-width: 420px) {
+  span {
+    font-size: 35px;
+    letter-spacing: 5px;
+    padding: 10px;
+  }
+  .content {
+    padding: 50px 5px;
+  }
+  h3 {
+    font-size: 18px;
+    text-align: center;
   }
   p {
-    font-size: 20px;
-  }
-  h1 {
-    font-size: 100px;
-    letter-spacing: 10px;
-  }
-}
-
-@media all and (min-width: 960px) {
-   h1 {
-    font-size: 120px;
-    letter-spacing: 25px;
+    line-height: 1.5em;
+    text-align: center;
   }
 }
